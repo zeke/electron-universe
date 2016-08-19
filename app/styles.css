@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'gr';
+  src: url('fonts/gr-book.woff') format('woff');
+}
+
+html {
+  background: url(images/universe.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: 'gr';
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 12vw;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
