@@ -12,6 +12,7 @@ Promised land of designing for one browser
 enables teams to build and ship fast
 
 - Here's how you get started
+- https://www.chromestatus.com/samples
 
 - History of JavaScript
 - Cool Chrome shit
