@@ -1,4 +1,4 @@
-const {remote} = require('electron')
+const {desktopCapturer, remote} = require('electron')
 
 document.addEventListener('keydown', event => {
   switch (event.key) {
@@ -9,3 +9,15 @@ document.addEventListener('keydown', event => {
       break
   }
 })
+
+navigator.webkitGetUserMedia({video: true},
+  function(stream) {
+    NodeList.prototype.forEach = Array.prototype.forEach
+    document.querySelectorAll('#camera video').forEach(function (el) {
+      el.src = URL.createObjectURL(stream)
+    })
+  },
+  function() {
+    console.error('could not connect stream')
+  }
+)
