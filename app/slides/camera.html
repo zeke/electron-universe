@@ -1,0 +1,59 @@
+<section id="camera">
+  <div><video></video></div>
+  <div><video></video></div>
+  <div><video></video></div>
+  <div><video></video></div>
+
+  <script>
+    navigator.webkitGetUserMedia({video: true},
+      function(stream) {
+        document.querySelectorAll('#camera video').forEach(function (el) {
+          el.src = URL.createObjectURL(stream)
+        })
+      },
+      function() {
+        console.error('could not connect stream')
+      }
+    )
+  </script>
+
+  <style>
+    #camera {
+      background: white;
+      float: none;
+      clear: both;
+      overflow: hidden;
+    }
+
+    #camera > div {
+      width: 50%;
+      height: 50%;
+      float: left;
+    }
+
+    #camera > div:nth-child(1) {
+      background-color: #f9c11c;
+    }
+
+    #camera > div:nth-child(2) {
+      background-color: #e82828;
+    }
+
+    #camera > div:nth-child(3) {
+      background-color: #03a9f4;
+    }
+
+    #camera > div:nth-child(4) {
+      background-color: #12d457;
+    }
+
+    #camera video {
+      mix-blend-mode: multiply;
+      width: 100%;
+      height: 100%;
+      -webkit-filter: saturate(0) contrast(2) brightness(3);
+      opacity: 0.5;
+    }
+  </style>
+
+</section>

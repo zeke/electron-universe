@@ -28,3 +28,11 @@ enables teams to build and ship fast
 10,000 Public GitHub Repos
 1,000 npm packages
 - What are people building with Electron?
+- Desktop notifications
+  - https://notifications.spec.whatwg.org/
+  - http://electron.atom.io/docs/tutorial/desktop-environment-integration/#unity-launcher-shortcuts-linux
+
+Powers of Ten
+https://www.youtube.com/watch?v=0fKBhvDjuy0
+
+navigator.geolocation.getCurrentPosition(resolve, reject)

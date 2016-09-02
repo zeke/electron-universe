@@ -3,17 +3,20 @@
   src: url('fonts/gr-book.woff') format('woff');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
-  background: url(images/universe.jpg) no-repeat center center fixed;
+  /*background: url(images/universe.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 body {
   font-family: 'gr';
-  color: white;
   margin: 0;
   padding: 0;
   position: relative;
@@ -24,8 +27,8 @@ section {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 section > video {
@@ -33,7 +36,28 @@ section > video {
   height: 100%;
 }
 
-figure {
+table {
+  /*margin: 50px;*/
+  display: block;
+  margin: 10vh;
+  width: 80vh;
+  height: 80vh;
+  /*background: yellow;*/
+  overflow: scroll;
+  color: #777;
+}
+
+
+td {
+  padding: 5px;
+}
+
+table a {
+  color: black;
+  text-decoration: none;
+}
+
+section > img, figure {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,42 +67,22 @@ figure {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  backdrop-filter: blur(100px);
 }
 
-#camera {
+h1 {
+  font-size: 8vw;
+  text-align: center;
+}
+
+h2 {
+  font-size: 8vw;
+  text-align: center;
+}
+
+#platforms {
   background: white;
-  float: none;
-  clear: both;
-  overflow: hidden;
 }
 
-#camera > div {
-  width: 50%;
-  height: 50%;
-  float: left;
-}
-
-#camera > div:nth-child(1) {
-  background-color: #f9c11c;
-}
-
-#camera > div:nth-child(2) {
-  background-color: #e82828;
-}
-
-#camera > div:nth-child(3) {
-  background-color: #03a9f4;
-}
-
-#camera > div:nth-child(4) {
-  background-color: #12d457;
-}
-
-#camera video {
-  mix-blend-mode: multiply;
-  width: 100%;
-  height: 100%;
-  -webkit-filter: saturate(0) contrast(2) brightness(3);
-  opacity: 0.5;
+#hammer {
+  background-color: #ed8542;
 }
