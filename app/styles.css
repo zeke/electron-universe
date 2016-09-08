@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  /* https://github.com/electron/electron/issues/4420 */
+  background:transparent;
+}
+
 html {
   /*background: url(images/universe.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -37,16 +42,13 @@ section > video {
 }
 
 table {
-  /*margin: 50px;*/
   display: block;
   margin: 10vh;
   width: 80vh;
   height: 80vh;
-  /*background: yellow;*/
   overflow: scroll;
   color: #777;
 }
-
 
 td {
   padding: 5px;
@@ -63,20 +65,32 @@ section > img, figure {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 12vw;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  font-size: 8vw;
-  text-align: center;
+figure img {
+  max-width: 100%;
 }
 
-h2 {
-  font-size: 8vw;
+figcaption {
+  font-size: 6vw;
+  padding: 4vw 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2 {
+  font-size: 8vw;
 }
 
 #platforms {
@@ -86,3 +100,15 @@ h2 {
 #hammer {
   background-color: #ed8542;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}*/

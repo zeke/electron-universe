@@ -1,38 +1,56 @@
-HTML imports
-CSS Containment
-ECMAScript 2015
-CSS properties
-Getting started resources
-awesome-electron
-electron-api-demos
+## History
+
+Evolution of JavaScript
+Browsers (embedded webview of http://evolutionofweb.appspot.com/)
+Chrome / Chromium
+Node.js
+npm package install graph
+
+## Why?
+
+enables teams to build and ship fast
+Promised land of designing for one browser
+Distribution
 Mac App Store
 Windows Store
-ARM
-Promised land of designing for one browser
-enables teams to build and ship fast
 
-- Here's how you get started
-- https://www.chromestatus.com/samples
+<!-- universal-windows -->
 
-- History of JavaScript
-- Cool Chrome shit
-- Cool Node shit
+## The Magic
+
+<!-- chromium-and-node -->
+
+- require() // leverage!!
 - HTML file has a access to the filesystem
-- npm package install graph
 - run a server inside node
 - webview tags inside a file URL
-- Evan Morikawa (SQLite -> React)
+
+## Free Stuff
+
+- ECMAScript 2015
+- CSS properties
+- CSS Containment
 - window.fetch
+- Geolocation
+- Webcam
+- Microphone
 - await
 - ~~CORS~~
-10,000 Public GitHub Repos
-1,000 npm packages
-- What are people building with Electron?
 - Desktop notifications
   - https://notifications.spec.whatwg.org/
   - http://electron.atom.io/docs/tutorial/desktop-environment-integration/#unity-launcher-shortcuts-linux
+- HTML imports
 
-Powers of Ten
-https://www.youtube.com/watch?v=0fKBhvDjuy0
+## The Community
 
-navigator.geolocation.getCurrentPosition(resolve, reject)
+- 10,000 Public GitHub Repos
+- 1,000 npm packages
+- What are people building with Electron?
+- Automation with Robotjs
+- Hyperterm
+- Evan Morikawa (SQLite -> React)
+
+## Future
+
+ARM
+Mobile
