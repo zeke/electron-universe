@@ -1,8 +1,12 @@
+const Config = require('electron-config')
+const config = new Config()
+
 class Carousel {
   constructor(selector) {
     this.selector = selector
     this.slideCount = document.querySelectorAll(`${selector} > *`).length
-    this.current = 1
+    this.current = config.get('currentSlide') || 1
+    this.showCurrent()
   }
 
   next (event) {
@@ -18,6 +22,7 @@ class Carousel {
   }
 
   showCurrent () {
+    config.set('currentSlide', this.current)
     document.body.scrollTop = window.innerHeight*(this.current-1)
   }
 

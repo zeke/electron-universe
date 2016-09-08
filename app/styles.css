@@ -70,13 +70,26 @@ section > img, figure {
   padding: 0;
 }
 
+section.colorful {
+  color: white;
+}
+
+.pink {
+  background-color: rgb(245, 169, 187)
+}
+
 figure img {
   max-width: 100%;
 }
 
 figcaption {
-  font-size: 6vw;
+  font-size: 3.5vw;
   padding: 4vw 0;
+  opacity: 0.6;
+}
+
+.colorful figcaption {
+  opacity: 1;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -87,10 +100,16 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
   margin: 0;
   padding: 0;
+  font-size: 8vw;
 }
 
-h1,h2 {
-  font-size: 8vw;
+h1 {
+  color: white;
+}
+
+h2 {
+  font-size: 6vw;
+  opacity: 1;
 }
 
 #platforms {

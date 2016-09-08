@@ -11,17 +11,46 @@
       <section id="home">
         <h1 class="uppercase">Electron<br>Universe</h1>
       </section>
+      <script src="scripts/starfield.js"></script>
+      <script>
+        var container = document.getElementById('home')
+        var starfield = new Starfield()
+        starfield.stars = 2000
+        starfield.minVelocity = 5
+        starfield.maxVelocity = 100
+        starfield.initialise(container)
+        starfield.start()
+      </script>
 
       <section>
-        <h1>What is Electron?</h1>
+        <h2>What is Electron?</h2>
       </section>
 
       <section>
-        <h1>Chromium + Node.js</h1>
+        <h2>Chromium + Node.js</h2>
       </section>
 
       <section>
-        <h1>Why Electron?</h1>
+        <figure>
+          <img src="images/chromium-and-node-logos.png">
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/chromium-and-node.svg">
+        </figure>
+      </section>
+
+      <section class="colorful pink">
+        <h2>Why Electron?</h2>
+      </section>
+
+      <section class="colorful pink">
+        <figure>
+          <img src="images/bulb.svg" style="opacity:0.4;">
+          <figcaption>Why Electron?</figcaption>
+        </figure>
       </section>
 
       <section>
@@ -32,11 +61,24 @@
       </section>
 
       <section>
-        <img src="images/mac-app-store.png">
+        <figure>
+          <img src="images/mac-app-store.png">
+          <figcaption>Mac App Store</figcaption>
+        </figure>
       </section>
 
       <section>
-        <img src="images/windows-store.png">
+        <figure>
+          <img src="images/windows-store.png">
+          <figcaption>Windows Store</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/universal-windows-platform.png">
+          <figcaption>Universal Windows Platform</figcaption>
+        </figure>
       </section>
 
       <!--
@@ -65,6 +107,7 @@
       <!-- Web Audio API -->
       <!-- WebRTC API -->
       <!-- Push API -->
+      <!-- autoUpdater -->
 
       <!-- Chrome 53 performance and battery life -->
 
