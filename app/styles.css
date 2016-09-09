@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'gr';
+  font-family: 'DIN Condensed', 'gr';
   margin: 0;
   padding: 0;
   position: relative;
@@ -110,6 +110,7 @@ h1 {
 h2 {
   font-size: 6vw;
   opacity: 1;
+  text-transform: uppercase;
 }
 
 #platforms {
