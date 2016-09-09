@@ -1,4 +1,3 @@
-const colors = require('nice-color-palettes')[0]
 /*
 	Starfield lets you take a div and turn it into a starfield.
 
@@ -15,6 +14,8 @@ function Starfield() {
 	this.stars = 100;
 	this.intervalId = 0;
 	this.maxDiameter = 4;
+	this.backgroundColor = '#000000';
+	this.colors = require('nice-color-palettes')[0];
 }
 
 //	The main function - initialises the starfield.
@@ -47,8 +48,13 @@ Starfield.prototype.start = function() {
 	//	Create the stars.
 	var stars = [];
 	for(var i=0; i<this.stars; i++) {
-		stars[i] = new Star(Math.random()*this.width, Math.random()*this.height, Math.random()*(this.maxDiameter-1)+1,
-		 (Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
+		stars[i] = new Star(
+			Math.random()*this.width,
+			Math.random()*this.height,
+			Math.random()*(this.maxDiameter-1)+1,
+		 	(Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity,
+			this.colors[Math.floor(Math.random()*this.colors.length)]
+		);
 	}
 	this.stars = stars;
 
@@ -72,8 +78,13 @@ Starfield.prototype.update = function() {
 		star.y += dt * star.velocity;
 		//	If the star has moved from the bottom of the screen, spawn it at the top.
 		if(star.y > this.height) {
-			this.stars[i] = new Star(Math.random()*this.width, 0, Math.random()*(this.maxDiameter-1)+1,
-		 	(Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
+			this.stars[i] = new Star(
+				Math.random()*this.width,
+				0,
+				Math.random()*(this.maxDiameter-1)+1,
+		 		(Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity,
+				this.colors[Math.floor(Math.random()*this.colors.length)]
+			);
 		}
 	}
 };
@@ -84,7 +95,7 @@ Starfield.prototype.draw = function() {
 	var ctx = this.canvas.getContext("2d");
 
 	//	Draw the background.
- 	ctx.fillStyle = '#000000';
+ 	ctx.fillStyle = this.backgroundColor;
 	ctx.fillRect(0, 0, this.width, this.height);
 
 	//	Draw stars.
@@ -98,10 +109,10 @@ Starfield.prototype.draw = function() {
 	}
 };
 
-function Star(x, y, size, velocity) {
+function Star(x, y, size, velocity, color) {
 	this.x = x;
 	this.y = y;
 	this.size = size;
 	this.velocity = velocity;
-	this.color = colors[Math.floor(Math.random()*colors.length)]
+	this.color = color;
 }

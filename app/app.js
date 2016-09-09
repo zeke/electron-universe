@@ -1,7 +1,8 @@
 NodeList.prototype.forEach = Array.prototype.forEach
 
 const {desktopCapturer, shell, remote} = require('electron')
-const repos = require('repos-using-electron')
+const inView = require('in-view')
+// const repos = require('repos-using-electron')
 
 require('./lib/slides')
 require('./lib/carousel')
@@ -27,3 +28,8 @@ function openLinksExternally () {
     })
   })
 }
+
+// Give each section an active class when it's visible in the viewport
+inView('section').on('enter', el => {
+  el.classList.add('active')
+})

@@ -1,15 +1,11 @@
 <div data-parent="camera">
-  <div class="video-wrapper"><video></video></div>
-  <div class="video-wrapper"><video></video></div>
-  <div class="video-wrapper"><video></video></div>
-  <div class="video-wrapper"><video></video></div>
+  <video></video>
 
   <script>
     navigator.webkitGetUserMedia({video: true},
       function(stream) {
-        document.querySelectorAll('#camera video').forEach(function (el) {
-          el.src = URL.createObjectURL(stream)
-        })
+        let el = document.querySelector('#camera video')
+        el.src = URL.createObjectURL(stream)
       },
       function() {
         console.error('could not connect to webcam')
@@ -20,37 +16,15 @@
   <style>
     #camera {
       background: white;
-      float: none;
-      clear: both;
-      overflow: hidden;
-    }
-
-    .video-wrapper {
-      width: 50%;
-      height: 50%;
-      float: left;
-    }
-
-    .video-wrapper:nth-child(1) {
-      background-color: #f9c11c;
-    }
-
-    .video-wrapper:nth-child(2) {
-      background-color: #e82828;
-    }
-
-    .video-wrapper:nth-child(3) {
-      background-color: #03a9f4;
-    }
-
-    .video-wrapper:nth-child(4) {
-      background-color: #12d457;
     }
 
     #camera video {
-      mix-blend-mode: multiply;
       width: 100%;
       height: 100%;
+    }
+
+    #camera video .filter-1 {
+      mix-blend-mode: multiply;
       -webkit-filter: saturate(0) contrast(2) brightness(3);
       opacity: 0.5;
     }
