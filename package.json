@@ -32,6 +32,7 @@
     "freq": "^0.1.5",
     "in-view": "^0.4.2",
     "lodash.countby": "^4.6.0",
+    "nice-color-palettes": "^1.0.1",
     "pad": "^1.0.1",
     "repos-using-electron": "^1.2.0"
   },
