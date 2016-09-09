@@ -1,0 +1,34 @@
+<div data-parent="marriage">
+
+  <figure>
+    <img src="images/chromium-and-node.svg">
+  </figure>
+
+  <script>
+    inView = require('in-view')
+    inView('#marriage').on('enter', el => {
+      el.classList.add('active')
+    })
+  </script>
+
+  <style>
+    #marriage.active {
+      animation: drifting linear 30s;
+      animation-iteration-count: infinite;
+      transform-origin: 50% 50%;
+    }
+
+    @keyframes drifting{
+      0% {
+        transform:  translate(-70vw,0)  rotate(-120deg) scale(0.5);
+      }
+      50% {
+        transform:  translate(70vw,0)  rotate(120deg) scale(0.5);
+      }
+      100% {
+        transform:  translate(-70vw,0)  rotate(-120deg) scale(0.5);
+      }
+    }
+  </style>
+
+</div>

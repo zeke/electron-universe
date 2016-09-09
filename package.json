@@ -30,7 +30,7 @@
     "electron-apps": "^1.0.1",
     "electron-config": "^0.2.1",
     "freq": "^0.1.5",
-    "in-view": "^0.2.0",
+    "in-view": "^0.4.2",
     "lodash.countby": "^4.6.0",
     "pad": "^1.0.1",
     "repos-using-electron": "^1.2.0"

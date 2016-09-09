@@ -1,8 +1,8 @@
-<section id="camera">
-  <div><video></video></div>
-  <div><video></video></div>
-  <div><video></video></div>
-  <div><video></video></div>
+<div data-parent="camera">
+  <div class="video-wrapper"><video></video></div>
+  <div class="video-wrapper"><video></video></div>
+  <div class="video-wrapper"><video></video></div>
+  <div class="video-wrapper"><video></video></div>
 
   <script>
     navigator.webkitGetUserMedia({video: true},
@@ -12,7 +12,7 @@
         })
       },
       function() {
-        console.error('could not connect stream')
+        console.error('could not connect to webcam')
       }
     )
   </script>
@@ -25,25 +25,25 @@
       overflow: hidden;
     }
 
-    #camera > div {
+    .video-wrapper {
       width: 50%;
       height: 50%;
       float: left;
     }
 
-    #camera > div:nth-child(1) {
+    .video-wrapper:nth-child(1) {
       background-color: #f9c11c;
     }
 
-    #camera > div:nth-child(2) {
+    .video-wrapper:nth-child(2) {
       background-color: #e82828;
     }
 
-    #camera > div:nth-child(3) {
+    .video-wrapper:nth-child(3) {
       background-color: #03a9f4;
     }
 
-    #camera > div:nth-child(4) {
+    .video-wrapper:nth-child(4) {
       background-color: #12d457;
     }
 
@@ -56,4 +56,4 @@
     }
   </style>
 
-</section>
+</div>
