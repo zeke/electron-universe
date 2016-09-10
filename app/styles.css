@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'gr';
-  src: url('fonts/gr-book.woff') format('woff');
+  font-family: 'gidole';
+  src: url('fonts/gidolinya-regular.woff') format('woff');
 }
 
 * {
@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'DIN Condensed', 'gr';
+  font-family: 'DIN Condensed', 'gidole';
   margin: 0;
   padding: 0;
   position: relative;
@@ -98,10 +98,11 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-size: 8vw;
+  font-size: 4vw;
 }
 
 h1 {
+  font-size: 14vw;
   color: white;
 }
 
