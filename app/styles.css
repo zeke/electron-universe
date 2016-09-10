@@ -123,6 +123,10 @@ h2 {
   text-transform: uppercase;
 }
 
+.faint {
+  opacity: 0.4;
+}
+
 /*.centered {
   position: absolute;
   top: 50%;
