@@ -15,9 +15,9 @@
       <script>
         var container = document.getElementById('home')
         var starfield = new Starfield()
-        starfield.stars = 2000
+        starfield.stars = 800
         starfield.minVelocity = 5
-        starfield.maxVelocity = 100
+        starfield.maxVelocity = 60
         starfield.initialise(container)
         starfield.start()
       </script>
@@ -32,6 +32,10 @@
 
       <section>
         <h2>What is Electron?</h2>
+      </section>
+
+      <section>
+        <h2>10,000 Public GitHub Repos</h2>
       </section>
 
       <section>
@@ -97,19 +101,29 @@
       <!-- Features -->
 
       <section id="camera"></section>
-      <link rel="import" href="slides/camera.html">
+      <!-- <link rel="import" href="slides/camera.html"> -->
 
       <section>
         <h2>Geolocation</h2>
       </section>
 
-      <section>
+      <section id="desktop-notifications">
         <h2>Desktop Notifications</h2>
       </section>
+      <script>
+        require('in-view')('#desktop-notifications').on('enter', el => {
+          setTimeout(function () {
+            new Notification('The Universe', {
+              body: `It's a pretty big place. If it's just us, seems like an awful waste of space.`
+            })
+          }, 1000)
+        })
+      </script>
 
       <section>
         <h2>Push Notifications</h2>
       </section>
+
 
       <section>
         <h2>Web Audio API</h2>
@@ -132,6 +146,22 @@
 
       <section id="dock">
         <video autoplay loop src="videos/dock.mp4"></video>
+      </section>
+
+      <section>
+        <h2>Atom</h2>
+      </section>
+
+      <section>
+        <h2>Visual Studio Code</h2>
+      </section>
+
+      <section>
+        <h2>Slack</h2>
+      </section>
+
+      <section>
+        <h2>Hyperterm</h2>
       </section>
 
       <!-- Chrome 53 performance and battery life -->
