@@ -1,3 +1,9 @@
+## Dev
+
+```sh
+npm install && npm start
+```
+
 ## History
 
 Evolution of JavaScript
