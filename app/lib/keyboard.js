@@ -2,7 +2,7 @@ document.addEventListener('keyup', event => {
   switch (event.key) {
     case 'Escape':
       let win = remote.getCurrentWindow()
-      if (win.isFullScreen()) win.setFullScreen(false)
+      win.setFullScreen(!win.isFullScreen())
       break
   }
 })
