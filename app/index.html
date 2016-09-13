@@ -27,16 +27,73 @@
       </section>
 
       <section>
-        <img src="images/team.png">
+        <h2>A long time ago...</h2>
       </section>
 
       <section>
-        <h2>What is Electron?</h2>
+        <figure>
+          <img src="images/netscape.svg">
+          <figcaption>Netscape Navigator 2.0<br><small>1995</small></figcaption>
+        </figure>
+        <aside>
+            Eich "wrote JavaScript in ten days" in 1995
+            Microsoft's antitrust trial, wherein the Court ruled that Microsoft
+            bundling of IE with the Windows operating system was a monopolistic
+            and illegal business practice. The decision came too late for
+            Netscape, however, as Internet Explorer had by then become the
+            dominant web browser in Windows.
+        </aside>
       </section>
 
       <section>
-        <h2>10,000 Public GitHub Repos</h2>
+        <figure>
+          <img src="images/firefox.png">
+          <figcaption>Mozilla Firefox 1.0<br><small>2000</small></figcaption>
+        </figure>
+        <aside>
+          - Firefox 3.5 was released in June 2009
+          - TraceMonkey was the first JIT compiler for JavaScript
+          - Performance improvements ranging between 20 and 40 times faster than 3
+        </aside>
       </section>
+
+      <section>
+        <figure>
+          <img src="images/old-chrome-logo.jpg">
+        </figure>
+        <aside>
+          - Google Chrome
+          - First released in 2008
+          - 62% worldwide usage share of desktop web browsers
+          - 50% market share across all platforms combined
+        </aside>
+      </section>
+
+      <!--
+        - "front-end vs back-end" divide
+        - Perl, PHP, ColdFusion, .NET, Django, Ruby on Rails
+       -->
+
+      <section>
+        <figure>
+          <img src="images/node-turtle.png">
+        </figure>
+        <aside>
+          - stats from Mikeal talk
+          - fs, path, net, http, dns, crypto, os, process
+          - File I/O is provided by simple wrappers around standard POSIX functions.
+          - The `path` module provides utilities for working with file and directory paths.
+          - The `vm` module provides APIs for compiling and running code within V8 Virtual Machine contexts.
+          - The `net` module provides you with an asynchronous network wrapper. It contains functions for creating both servers and clients (called streams).
+        </aside>
+      </section>
+
+      <section id="hexbin"></section>
+      <link rel="import" href="slides/hexbin.html">
+
+      <!-- 300,000 modules -->
+      <!-- 400 new modules per day -->
+      <!-- npm package install graph ? -->
 
       <section>
         <figure>
@@ -46,6 +103,9 @@
 
       <section id="marriage"></section>
       <link rel="import" href="slides/marriage.html">
+
+      <!-- collective benevolent force -->
+      <!-- unbounded by the control of any one company or entity -->
 
       <section class="colorful pink">
         <h2>Why Electron?</h2>
@@ -63,6 +123,12 @@
           <img src="images/platforms.svg" style="opacity:0.4;">
           <figcaption>Build for all platforms.</figcaption>
         </figure>
+        <aside>
+          - Learn Objective C, Swift
+          - Learn Visual Studio, .NET
+          - Learn XCode
+          - Distribution
+        </aside>
       </section>
 
       <section>
@@ -77,14 +143,10 @@
           <img src="images/windows-store.png">
           <figcaption>Windows Store</figcaption>
         </figure>
+        <aside>
+          - Universal Windows Platform
+        </aside>
       </section>
-
-      <!-- <section>
-        <figure>
-          <img src="images/universal-windows-platform.png">
-          <figcaption>Universal Windows Platform</figcaption>
-        </figure>
-      </section> -->
 
       <!--
         enables teams to build and ship fast: joshaber tweet https://twitter.com/joshaber/status/761724206375702528
@@ -95,10 +157,31 @@
         <img src="images/ship.png">
       </section>
 
-      <section id="hexbin"></section>
-      <link rel="import" href="slides/hexbin.html">
+      <!-- <section>
+        <h2>What is Electron?</h2>
+      </section> -->
+
+      <section>
+        <h2>10,000 Public GitHub Repos</h2>
+      </section>
+
+      <!--  1,000 npm packages -->
 
       <!-- Features -->
+
+      <!-- ES2015 What percentage? -->
+      <!-- - CSS properties -->
+      <!-- - CSS Containment -->
+      <!-- - window.fetch -->
+      <!-- - Microphone -->
+      <!-- - await -->
+      <!-- - ~~CORS~~ -->
+      <!-- - HTML imports -->
+
+      <!-- - require() // leverage!! -->
+      <!-- - HTML file has a access to the filesystem -->
+      <!-- - run a server inside node -->
+      <!-- - webview tags inside a file URL -->
 
       <section id="camera"></section>
       <!-- <link rel="import" href="slides/camera.html"> -->
@@ -106,6 +189,15 @@
       <section>
         <h2>Geolocation</h2>
       </section>
+      <script>
+        // const geojsonify = require('geoposition-to-geojson')
+        // const movement = require('geolocation-stream')()
+
+        navigator.geolocation.getCurrentPosition(
+          function(position) { console.log(position) },
+          function(err) { console.error(err) }
+        )
+      </script>
 
       <section id="desktop-notifications">
         <h2>Desktop Notifications</h2>
@@ -123,7 +215,6 @@
       <section>
         <h2>Push Notifications</h2>
       </section>
-
 
       <section>
         <h2>Web Audio API</h2>
@@ -164,7 +255,13 @@
         <h2>Hyperterm</h2>
       </section>
 
+      <!-- Automation with Robotjs -->
+
+      <!-- Evan Morikawa (SQLite -> React) -->
+
       <!-- Chrome 53 performance and battery life -->
+      <!-- ARM -->
+      <!-- Mobile -->
 
       <section>
         <h2>Getting Started</h2>
@@ -201,7 +298,24 @@
       </section>
 
       <section>
-        <h2>electron</h2>
+        <img src="images/team.png">
+      </section>
+
+      <section>
+        <h2><span class="faint">@</span>zeke</h2>
+      </section>
+
+      <section>
+        <h2>
+          <span class="faint">@</span>zcbenz<br>
+          <span class="faint">@</span>kevinsawicki<br>
+          <span class="faint">@</span>jlord<br>
+          <span class="faint">@</span>zeke
+        </h2>
+      </section>
+
+      <section>
+        <h2>electron.atom.io</h2>
         <h2>twitter.com/electronjs</h2>
         <h2>atom-slack.herokuapp.com</h2>
       </section>

@@ -39,6 +39,10 @@ section > video {
   height: 100%;
 }
 
+aside {
+  display: none;
+}
+
 table {
   display: block;
   margin: 10vh;
@@ -77,6 +81,7 @@ section.colorful {
 }
 
 figure img {
+  min-width: 100%;
   max-width: 100%;
 }
 
@@ -122,6 +127,10 @@ h2 {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+small {
+  opacity: 0.6;
 }
 
 .faint {

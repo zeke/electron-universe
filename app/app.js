@@ -1,6 +1,6 @@
 NodeList.prototype.forEach = Array.prototype.forEach
 
-const {desktopCapturer, shell, remote} = require('electron')
+const {desktopCapturer, ipcRenderer, remote, shell} = require('electron')
 const inView = require('in-view')
 // const repos = require('repos-using-electron')
 
@@ -32,4 +32,6 @@ function openLinksExternally () {
 // Give each section an active class when it's visible in the viewport
 inView('section').on('enter', el => {
   el.classList.add('active')
+  let notes = el.querySelector('aside')
+  if (notes) ipcRenderer.send('notes', notes.textContent)
 })
