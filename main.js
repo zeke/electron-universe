@@ -1,5 +1,4 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
-const dedent = require('dedent')
 const Config = require('electron-config')
 const config = new Config()
 let win
@@ -31,6 +30,5 @@ app.on('ready', () => {
 })
 
 ipcMain.on('notes', (event, notes) => {
-  console.log('--------------------------')
-  console.log(dedent(notes))
+  console.log(notes)
 })

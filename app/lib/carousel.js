@@ -36,6 +36,8 @@ const carousel = Carousel.new('#slides')
 // prevent arrow keys from slightly scrolling the page
 document.addEventListener('keydown', event => {
   switch (event.key) {
+    case 'PageDown':
+    case 'PageUp':
     case 'ArrowDown':
     case 'ArrowRight':
     case 'ArrowUp':
@@ -49,11 +51,13 @@ document.addEventListener('keyup', event => {
   switch (event.key) {
     case 'ArrowDown':
     case 'ArrowRight':
+    case 'PageDown':
       event.preventDefault()
       carousel.next(event)
       break
     case 'ArrowUp':
     case 'ArrowLeft':
+    case 'PageUp':
       event.preventDefault()
       carousel.prev(event)
       break

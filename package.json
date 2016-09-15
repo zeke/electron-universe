@@ -26,24 +26,20 @@
     "standard": "^7.1.2"
   },
   "dependencies": {
-    "count-words-array": "^1.0.3",
     "dedent": "^0.6.0",
     "electron-apps": "^1.0.1",
     "electron-config": "^0.2.1",
-    "freq": "^0.1.5",
     "geolocation-stream": "0.0.1",
     "geoposition-to-geojson": "^1.0.1",
     "in-view": "^0.4.2",
     "javascript-yellow": "^1.0.2",
-    "lodash.countby": "^4.6.0",
     "malarkey": "^1.3.3",
-    "nice-color-palettes": "^1.0.1",
-    "pad": "^1.0.1",
-    "repos-using-electron": "^1.2.0"
+    "nice-color-palettes": "^1.0.1"
   },
   "standard": {
     "env": {
-      "mocha": true
+      "mocha": true,
+      "browser": true
     }
   }
 }

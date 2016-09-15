@@ -1,0 +1,19 @@
+<div data-parent="home">
+  <h1 class="uppercase">Electron<br>Universe</h1>
+  <aside>
+    Hi I'm Zeke. I work on the Electron team at GitHub.
+    I know you all want to hear about Electron, but first I want to take
+    a moment to talk about Javascript and its origins.
+  </aside>
+
+  <script src="../vendor/starfield.js"></script>
+  <script>
+    var container = document.getElementById('home')
+    var starfield = new Starfield()
+    starfield.stars = 800
+    starfield.minVelocity = 5
+    starfield.maxVelocity = 60
+    starfield.initialise(container)
+    starfield.start()
+  </script>
+</div>

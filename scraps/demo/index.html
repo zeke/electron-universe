@@ -1,0 +1,9 @@
+<html>
+  <script>
+    const fs = require('fs')
+    const os = require('os')
+    const files = fs.readdirSync(os.homedir())
+    document.innerHTML = files.join('<br>')
+  </script>
+  <script src="this/works/too.js"></script>
+<html>

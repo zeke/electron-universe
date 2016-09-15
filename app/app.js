@@ -1,37 +1,28 @@
 NodeList.prototype.forEach = Array.prototype.forEach
 
-const {desktopCapturer, ipcRenderer, remote, shell} = require('electron')
+const {desktopCapturer, remote, shell} = require('electron')
 const inView = require('in-view')
-// const repos = require('repos-using-electron')
-
+const typewriter = require('./lib/typewriter')
+const prettyNumbers = require('./lib/pretty-numbers')
+const externalLinks = require('./lib/external-links')
+const logNotes = require('./lib/notes')
 require('./lib/slides')
 require('./lib/carousel')
 require('./lib/keyboard')
+require('./lib/dedent-code')
 
 function updateDOM () {
-  formatNumbers()
+  prettyNumbers()
   openLinksExternally()
 }
 
-function formatNumbers () {
-  document.querySelectorAll('.pretty-number').forEach(function (el) {
-    el.textContent = Number(el.textContent).toLocaleString()
-  })
-}
-
-// Open all http links in external browser
-function openLinksExternally () {
-  document.querySelectorAll('a[href^="http"]').forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault()
-      shell.openExternal(link.getAttribute('href'))
-    })
-  })
-}
-
 // Give each section an active class when it's visible in the viewport
-inView('section').on('enter', el => {
-  el.classList.add('active')
-  let notes = el.querySelector('aside')
-  if (notes) ipcRenderer.send('notes', notes.textContent)
-})
+inView('section')
+  .on('enter', section => {
+    section.classList.add('active')
+    logNotes(section)
+    typewriter(section)
+  })
+  .on('exit', section => {
+    section.classList.remove('active')
+  })

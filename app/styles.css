@@ -9,7 +9,7 @@
 
 ::selection {
   /* https://github.com/electron/electron/issues/4420 */
-  background:transparent;
+  /*background:transparent;*/
 }
 
 body {
@@ -41,7 +41,17 @@ section > video {
 
 aside {
   display: none;
+  /*position: fixed;*/
+  /*z-index: 100;*/
+  /*height: 100px;*/
+  /*bottom: 100px;*/
+  font-family: 'helvetica neue', helvetica, arial;
+  text-align: center;
 }
+
+/*section.active aside {
+  display: block;
+}*/
 
 table {
   display: block;
@@ -61,34 +71,65 @@ table a {
   text-decoration: none;
 }
 
-section > img, figure {
+figure {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  /*text-transform: uppercase;*/
   margin: 0;
   padding: 0;
 }
 
-section.colorful {
-  color: white;
+figure img {
+  max-height: 60vh;
+  max-width: 80vw;
+  width: auto;
+  height: auto;
 }
 
-.pink {
+pre {
+  text-align: left;
+}
+
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Monaco, Courier, monospace;
+  line-height: 1.4;
+  font-size: 4vw;
+}
+
+.code {
+  background: black;
+  color: #CCC;
+}
+
+section.colorful {
+  color: white;
   background-color: rgb(245, 169, 187)
 }
 
-figure img {
-  min-width: 100%;
-  max-width: 100%;
+section.dark {
+  background: black;
+}
+
+section.dark h2 {
+  color: white;
+  opacity: 0.7;
+}
+
+.javascript-yellow {
+  background-color: #f7df1e;
 }
 
 figcaption {
   font-size: 3.5vw;
-  padding: 4vw 0;
   opacity: 0.6;
+
+  /* Use same height and line-height so element will retain it's size even
+  when it has no textContent (because it's about to be typewritten) */
+  height: 8vh;
+  line-height: 8vh;
+  text-transform: uppercase;
 }
 
 .colorful figcaption {
@@ -103,7 +144,7 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-size: 4vw;
+  width: 100%;
 }
 
 h1 {
@@ -112,17 +153,17 @@ h1 {
 }
 
 h2 {
-  font-size: 6vw;
+  font-size: 9vw;
   opacity: 1;
   text-transform: uppercase;
 }
 
-#platforms {
-  background: white;
-}
-
-#hammer {
-  background-color: #ed8542;
+h3 {
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 6vw;
+  opacity: 1;
+  text-transform: uppercase;
 }
 
 .uppercase {
@@ -137,10 +178,8 @@ small {
   opacity: 0.4;
 }
 
-/*.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}*/
+img.full-screen {
+  object-fit: cover;
+  width: 100%;
+  height: 100%
+}
