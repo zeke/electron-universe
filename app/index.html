@@ -11,7 +11,7 @@
       <section id="home"></section>
       <link rel="import" href="slides/home.html">
 
-      <section>
+      <section id="zeke">
         <h2><span class="faint">@</span>zeke</h2>
       </section>
 
@@ -27,12 +27,15 @@
 
       <section id="a-long-time-ago" class="dark">
         <h2 data-typewriter data-pause="500" data-speed="90">A long time ago...</h2>
+        <aside class="">
+          To know what electron is, it's important to know where it came from.
+        </aside>
       </section>
 
       <section id="js"></section>
       <link rel="import" href="slides/js.html">
 
-      <section>
+      <section id="netscape">
         <figure>
           <img src="images/netscape.png">
         </figure>
@@ -43,7 +46,7 @@
         </aside>
       </section>
 
-      <section>
+      <section id="javascript-alert">
         <figure>
           <img src="images/alert.png">
         </figure>
@@ -54,7 +57,7 @@
         </aside>
       </section>
 
-      <section>
+      <section id="ie">
         <figure>
           <img src="images/ie.svg">
         </figure>
@@ -63,7 +66,7 @@
         </aside>
       </section>
 
-      <section>
+      <section id="windows-95-plus-pack">
         <figure>
           <img src="images/windows-95-plus-pack.png">
         </figure>
@@ -89,8 +92,6 @@
         </aside>
       </section>
 
-      <!-- timeline of events! -->
-
       <section>
         <figure>
           <img src="images/mozilla.png">
@@ -110,8 +111,6 @@
           Yay.
         </aside>
       </section>
-
-      <!-- opera? -->
 
       <section>
         <figure>
@@ -133,7 +132,6 @@
         </aside>
       </section>
 
-
       <section>
         <figure>
           <img src="images/old-chrome-logo.jpg">
@@ -147,14 +145,21 @@
 
       <section>
         <figure>
+          <img src="images/chromium.png">
+        </figure>
+        <aside>
+          chromium
+        </aside>
+      </section>
+
+      <section>
+        <figure>
           <img src="images/v8.png">
         </figure>
         <aside>
           Google has a dedicated team building a new Javascript engine called v8
         </aside>
       </section>
-
-      <!-- chromium -->
 
       <section>
         <figure>
@@ -213,8 +218,19 @@
         <h2>400 new packages per day</h2>
       </section>
 
-      <section id="hexbin"></section>
-      <link rel="import" href="slides/hexbin.html">
+      <section>
+        <img src="images/hexbin.png" class="full-screen">
+        <aside>
+          hexbin!
+        </aside>
+      </section>
+
+      <section>
+        <img src="images/timeline.png" class="full-screen">
+        <aside>
+          timeline
+        </aside>
+      </section>
 
       <section class="colorful">
         <h2 data-typewriter>so, What is Electron?</h2>
@@ -257,6 +273,8 @@
         </figure>
         <aside>
           Universal Windows Platform
+          Windows 10 makes it easier to develop apps for the UWP with just one API set,
+          one app package, and one store to reach all Windows 10 devices – PC, tablet, phone, Xbox, etc
         </aside>
       </section>
 
@@ -264,15 +282,33 @@
       <link rel="import" href="slides/apps.html">
 
       <section id="dock">
-        <video autoplay loop src="videos/dock.mp4"></video>
+        <video src="videos/dock.mp4"></video>
       </section>
 
       <section>
-        <video autoplay loop src="videos/svgsus.mp4"></video>
+        <video src="videos/mojibar.mp4"></video>
+      </section>
+
+      <section>
+        <video src="videos/svgsus.mp4"></video>
+      </section>
+
+      <section>
+        <h2>DAEMONS</h2>
       </section>
 
       <section class="colorful">
         <h2 data-typewriter data-pause="100" data-speed="30">Hello, world.</h2>
+      </section>
+
+      <section>
+        <h2>Nodejs.org</h2>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/electron-quickstart.png">
+        </figure>
       </section>
 
       <section class="code">
@@ -356,7 +392,7 @@
       </section>
 
       <section>
-        <h2>await</h2>
+        <h2>async / await</h2>
       </section>
 
       <section>
@@ -387,10 +423,16 @@
 
       <section>
         <h2>Push Notifications</h2>
+        <aside>
+          The Push API gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.
+        </aside>
       </section>
 
       <section>
         <h2>Web Audio API</h2>
+        <aside>
+          The Web Audio API is a high-level JavaScript API for processing and synthesizing audio in web applications. The goal of this API is to include capabilities found in modern game audio engines and some of the mixing, processing, and filtering tasks that are found in modern desktop audio production applications.
+        </aside>
       </section>
 
       <section>
@@ -407,6 +449,33 @@
 
       <section>
         <h2>10,000 Public GitHub Repos</h2>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/deps.png">
+        </figure>
+        <aside>
+          deps! lots of react
+        </aside>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/devdeps.png">
+        </figure>
+        <aside>
+          devdeps!
+        </aside>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/forks.png">
+        </figure>
+        <aside>
+          forks!
+        </aside>
       </section>
 
       <section class="code">
@@ -440,23 +509,34 @@
       </section>
 
       <section>
-        <figure>
-          <img src="images/electron-quickstart.png">
-        </figure>
+        <h2>electron.atom.io</h2>
+        <aside>
+          guides for getting started
+          API documentation
+        </aside>
       </section>
 
       <section>
         <figure>
           <img src="images/awesome-electron.png">
         </figure>
+        <aside>
+          boilerplates, tools, books, videos, podcasts
+        </aside>
       </section>
 
       <section>
-        <h2>npm.im <span class="faint">is your friend</span></h2>
+        <h2>npms.io <span class="faint">is your friend</span></h2>
+        <aside>
+          npms.io
+        </aside>
       </section>
 
       <section>
         <h2>ghub.io <span class="faint">is your friend</span></h2>
+        <aside>
+          ghub.io
+        </aside>
       </section>
 
       <!-- <section>
@@ -476,11 +556,36 @@
       <!-- ARM -->
       <!-- Mobile -->
 
-      <!-- <section>
+      <section class="colorful">
+        <h2 data-typewriter>Getting help</h2>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/github.png">
+          <figcaption>electron/electron</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/slack.png">
+          <figcaption>atom-slack.herokuapp.com</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <img src="images/twitter.jpg">
+          <figcaption>@electronjs</figcaption>
+        </figure>
+      </section>
+
+      <section>
         <figure>
           <img src="images/team.png">
         </figure>
-      </section> -->
+      </section>
 
       <section>
         <h2>
@@ -492,15 +597,8 @@
       </section>
 
       <section>
-        <figure>
-          <img src="images/slack.png">
-          <figcaption>atom-slack.herokuapp.com</figcaption>
-        </figure>
+        <h2>THANKS</h2>
       </section>
-
-      <!-- <section>
-        <h2>talk to strangers</h2>
-      </section> -->
 
       <section>
         <h2>🙏</h2>

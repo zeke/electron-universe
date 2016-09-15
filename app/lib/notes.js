@@ -8,6 +8,14 @@ module.exports = function logNotes(section) {
 
   notes = dedent`--------------------------\n${notes.textContent}`
 
+  let next = section.nextElementSibling
+  if (next) {
+    let nextNotes = next.querySelector('aside')
+    if (nextNotes && nextNotes.textContent) {
+      notes += `\nNext: ${dedent(nextNotes.textContent.substr(0, 50))}`
+    }
+  }
+
   // log notes in browser console and shell
   console.log(notes)
   ipcRenderer.send('notes', notes)
