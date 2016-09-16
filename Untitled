@@ -1,4 +1,0 @@
-mkdir demo && cd demo
-npm init
-npm install electron --save-dev
-touch main.js index.html
