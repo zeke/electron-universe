@@ -85,6 +85,11 @@ section.dark {
   background: black;
 }
 
+section.darkish {
+  background: rgb(200, 7, 82);
+}
+
+
 section.dark h2 {
   color: white;
   opacity: 0.7;
