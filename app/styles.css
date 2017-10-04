@@ -66,14 +66,14 @@ pre {
 }
 
 code {
-  font-family: Consolas, "Liberation Mono", Menlo, Monaco, Courier, monospace;
+  font-family: "Droid Sans Mono", Consolas, "Liberation Mono", Menlo, Monaco, Courier, monospace;
   line-height: 1.4;
   font-size: 4vw;
 }
 
 .code {
-  background: black;
-  color: #CCC;
+  background: #FADEF6;
+  color: #850444;
 }
 
 section.colorful {
@@ -86,7 +86,7 @@ section.dark {
 }
 
 section.darkish {
-  background: rgb(200, 7, 82);
+  background: rgb(116, 116, 116);
 }
 
 
