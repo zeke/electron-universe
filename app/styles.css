@@ -8,10 +8,12 @@
 }
 
 body {
-  font-family: 'DIN Condensed', 'gidole';
+  font-family: 'apex new', 'DIN Condensed', 'gidole';
   margin: 0;
   padding: 0;
   position: relative;
+  background: #191F21;
+  color: white;
 }
 
 section {
@@ -61,6 +63,15 @@ figure img, figure video {
   height: auto;
 }
 
+figure.gallery img {
+  max-height: 60vh;
+  max-width: 80vw;
+  width: 16vh;
+  height: 16vh;
+  margin: 2vh;
+  filter: grayscale(100%);
+}
+
 pre {
   text-align: left;
 }
@@ -72,10 +83,13 @@ code {
 }
 
 .code {
-  background: #FADEF6;
-  color: #850444;
+  background: #191F21;
+  color: #F28127;
 }
 
+.code.green {
+  color: #5EAF6E;
+}
 section.colorful {
   color: white;
   background-color: rgb(245, 169, 187)
@@ -86,7 +100,7 @@ section.dark {
 }
 
 section.darkish {
-  background: rgb(116, 116, 116);
+  background: #191F21;
 }
 
 
@@ -100,7 +114,9 @@ section.dark h2 {
 }
 
 figcaption {
+  margin-top: 3vw;
   font-size: 3.5vw;
+  font-weight: 500;
   opacity: 0.6;
   white-space: nowrap;
 
@@ -124,20 +140,21 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+figure h1, figure h2 {
+  position: relative;
 }
 
 h1 {
-  font-size: 14vw;
+  font-size: 12vw;
+  font-weight: 500;
   color: white;
 }
 
-h2 {
-  font-size: 9vw;
-  opacity: 1;
-  text-transform: uppercase;
-}
-
-h3 {
+h2, h3 {
   padding-left: 200px;
   padding-right: 200px;
   font-size: 6vw;
@@ -161,4 +178,18 @@ img.full-screen {
   object-fit: cover;
   width: 100%;
   height: 100%
+}
+
+ul.perks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.perks li {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 4vh;
+  white-space: nowrap;
 }
